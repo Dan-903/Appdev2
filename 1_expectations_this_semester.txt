@@ -1,0 +1,28 @@
+1. Introduction
+
+I have used languages like "Java", "Python", "Javascript", "PHP". And have explore other stuff like using MySQL. I have little to no experience with backend
+but I'm hoping that I find this easier than frontend development since I take too long and struggle with frontend. 
+
+2. Course Expectation
+
+I want to hone my skills as a developer during this course
+
+I want to learn how APIs work and function in systems, I would also want to learn how to use these frameworks mentioned. And also God-Willing,
+learn how to manage a database.
+
+Since I find front-end development a struggle to work on, I'm hoping that at least I could be good at back-end development. Maybe back-end development will be the career that I'm looking for.
+
+3. Challenges and Areas for Improvement
+
+Front-end development is something that I want to improve on eventually, I find design bothersome. I think I just have to keep on practicing, eventually I'll get better at it
+as I get more familiar with the tools and languages I'm using.
+
+4. Expectations from the Instructor
+
+As the instructor, I expect a patient and understanding teacher when it comes to us learning and developing our skills. And I would also like to have tutorials and coding examples that can guide me
+in this course.
+
+5. Final Thoughts
+
+I learn best when I study at my own pace, learning in class is sometimes a hit or miss because of the pacing of the lessons. 
+And there's only so much information I can retain in a day considering we have a lot of subjects to attend to. 
