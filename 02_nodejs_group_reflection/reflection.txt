@@ -1,0 +1,25 @@
+1. Your Role:
+
+Developer
+
+Being a developer in a team is difficult, especially for me that has little experience in following conventional/efficient programming. I had problems with setting up my local environment, as well as forgetting to pull from the remote repository every time I do my task.
+I'm also having a hard time doing front end as it focuses on the design of the website, the feel of the website. I also had difficulties in with the file structures and modularization of the codes too, as I am new to it.
+
+2. Teamwork Experience:
+
+It is good.
+
+Our Project managers are strict with the schedule, but are understanding when we developers face difficulties and even offered help if we needed.
+
+
+Our team faced some difficulties with a few members as they only attended meetings a few times and rarely complied with the tasks they're given. But that has been taken care of.
+
+all in all, I think that my team's coordination is good!
+
+3. Personal Growth and Discipline:
+
+I want to start learning about back end development, it might be my forte or at least I be better than my front-end developing skills.
+ 
+As for debugging, I kind of enjoy debugging especially when you solve the problem without creating another problem, it feels good.
+
+I'd also want to improve on modularizing my code as it's daunting to read a thousand line code and it's clean and I can reuse the function.
