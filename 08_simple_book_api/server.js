@@ -1,81 +1,26 @@
 const express = require("express");
+const mongoose = require("mongoose");
+require("dotenv").config();
+const bookRoutes = require("./routes/bookRoutes");
+
 const app = express();
 
 // Middleware to parse JSON bodies
 app.use(express.json());
+// Middleware to parse URL-encoded bodies
+app.use(express.urlencoded({ extended: true }));
 
-// In-memory books collection
-let books = [
-  {
-    id: 1,
-    title: "title 1",
-    author: "Author 1",
-  },
-  {
-    id: 2,
-    title: "title 2",
-    author: "Author 2",
-  },
-];
+// Connect to MongoDB
+mongoose
+  .connect(process.env.MONGODB_URI)
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.error("Could not connect to MongoDB:", err));
 
 app.get("/", (req, res) => {
-  res.send("Simple Book API using Node.js and Express");
+  res.send("Simple Book API using Node.js, Express, and MongoDB");
 });
 
-app.get("/api/books", (req, res) => {
-  console.log('GET /api/books called, current books:', books);
-  res.json(books);
-});
-
-app.get("/api/books/:id", (req, res) => {
-  const book = books.find((b) => b.id === parseInt(req.params.id));
-  if (!book) {
-    return res.status(404).json({ message: "Book not found" });
-  }
-  res.json(book);
-});
-
-app.post("/api/books", (req, res) => {
-  const { title, author } = req.body;
-
-  if (!title || !author) {
-    return res.status(400).json({ message: "Title and author are required" });
-  }
-  // Calculate next ID by finding the maximum ID and adding 1
-  const maxId = books.reduce((max, book) => Math.max(max, book.id), 0);
-  const newBook = {
-    id: maxId + 1,
-    title,
-    author,
-  };
-
-  books.push(newBook);
-  res.status(201).json(newBook);
-});
-
-app.patch("/api/books/:id", (req, res) => {
-  const book = books.find((b) => b.id === parseInt(req.params.id));
-  if (!book) {
-    return res.status(404).json({ message: "Book not found" });
-  }
-
-  const { title, author } = req.body;
-
-  if (title) book.title = title;
-  if (author) book.author = author;
-
-  res.json(book);
-});
-
-app.delete("/api/books/:id", (req, res) => {
-  const bookIndex = books.findIndex((b) => b.id === parseInt(req.params.id));
-  if (bookIndex === -1) {
-    return res.status(404).json({ message: "Book not found" });
-  }
-
-  books.splice(bookIndex, 1);
-  res.json({ message: "Book successfully deleted" });
-});
+app.use("/api/books", bookRoutes);
 
 const PORT = 3000;
 app.listen(PORT, () => {
